@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37314.3 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoiaRara.API", "JoiaRara.API\JoiaRara.API.csproj", "{2613A2E0-0757-4197-90E1-FE4C60F979D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoiaRara.Application", "JoiaRara.Application\JoiaRara.Application.csproj", "{18B33F3C-8FB7-4980-8C27-752E13FD4DC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoiaRara.Core", "JoiaRara.Core\JoiaRara.Core.csproj", "{6213761E-9E1C-46B0-8FEB-4545A5AC9838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoiaRara.Infrastructure", "JoiaRara.Infrastructure\JoiaRara.Infrastructure.csproj", "{4DAAE319-AFD5-4518-ABA6-A367143085AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2613A2E0-0757-4197-90E1-FE4C60F979D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2613A2E0-0757-4197-90E1-FE4C60F979D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2613A2E0-0757-4197-90E1-FE4C60F979D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2613A2E0-0757-4197-90E1-FE4C60F979D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B33F3C-8FB7-4980-8C27-752E13FD4DC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B33F3C-8FB7-4980-8C27-752E13FD4DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B33F3C-8FB7-4980-8C27-752E13FD4DC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B33F3C-8FB7-4980-8C27-752E13FD4DC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6213761E-9E1C-46B0-8FEB-4545A5AC9838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6213761E-9E1C-46B0-8FEB-4545A5AC9838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6213761E-9E1C-46B0-8FEB-4545A5AC9838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6213761E-9E1C-46B0-8FEB-4545A5AC9838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DAAE319-AFD5-4518-ABA6-A367143085AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DAAE319-AFD5-4518-ABA6-A367143085AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DAAE319-AFD5-4518-ABA6-A367143085AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DAAE319-AFD5-4518-ABA6-A367143085AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1DF6D268-EE0A-4B3E-A4E7-7361A1B89881}
+	EndGlobalSection
+EndGlobal
