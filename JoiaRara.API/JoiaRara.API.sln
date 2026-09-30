@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoiaRara.API", "JoiaRara.AP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoiaRara.Application", "JoiaRara.Application\JoiaRara.Application.csproj", "{18B33F3C-8FB7-4980-8C27-752E13FD4DC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoiaRara.Core", "JoiaRara.Core\JoiaRara.Core.csproj", "{6213761E-9E1C-46B0-8FEB-4545A5AC9838}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoiaRara.Domain", "JoiaRara.Domain\JoiaRara.Domain.csproj", "{6213761E-9E1C-46B0-8FEB-4545A5AC9838}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoiaRara.Infrastructure", "JoiaRara.Infrastructure\JoiaRara.Infrastructure.csproj", "{4DAAE319-AFD5-4518-ABA6-A367143085AF}"
 EndProject
