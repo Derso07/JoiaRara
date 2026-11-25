@@ -2,24 +2,34 @@
 
 public class Sale : Entity
 {
-    public Sale(Guid id, DateTime creatOn, DateTime modifyOn, int totalValue, PaymentMethod paymentMethod,
-        string? observations, Guid customerId, DateTime? paymentDate, DateTime scheduledPaymentDate) : base(id, creatOn, modifyOn)
+    protected Sale()
+    {
+        
+    }
+    
+    public Sale(Guid id, DateTime creatOn, DateTime modifyOn, decimal totalValue, 
+        string? observations, Guid customerId,Guid paymentId) : base(id, creatOn, modifyOn)
     {
         TotalValue = totalValue;
-        PaymentMethod = paymentMethod;
         Observations = observations;
         CustomerId = customerId;
-        PaymentDate = paymentDate;
-        ScheduledPaymentDate = scheduledPaymentDate;
+        PaymentId = paymentId;
     }
 
-    public int TotalValue { get; set; }
-    public PaymentMethod PaymentMethod { get; set; }
-    public DateTime? PaymentDate { get; set; }
-    public DateTime ScheduledPaymentDate { get; set; }
-    public string? Observations { get; set; }
+    public decimal TotalValue { get; private set; }
+    public string? Observations { get; private set; }
 
     // Property Navigations
-    public Guid CustomerId { get; set; }
-    public User Customer { get; set; }
+    public Guid CustomerId { get; private set; }
+    public User Customer { get; private set; }
+
+    public Guid PaymentId { get; private set; }
+    public Payment Payment { get; private set; }
+    
+    public ICollection<ItemSale> ItemSales { get; set; }
+
+    private void totalValue()
+    {
+        TotalValue = ItemSales.Sum(i => i.TotalValue);
+    }
 }

@@ -1,10 +1,21 @@
 ﻿namespace JoiaRara.Domain.Entities;
 
-public abstract class Entity(Guid id, DateTime creatOn, DateTime modifyOn)
+public abstract class Entity
 {
-    public Guid Id { get; set; } = id;
-    public DateTime CreatedOn { get; set; } = creatOn;
-    public DateTime ModifyOn { get; set; } = modifyOn;
+    protected Entity()
+    {
+        // Usado pelo Entity Framework Core
+    }
+    protected Entity(Guid id, DateTime createdOn, DateTime modifiedOn)
+    {
+        Id = id;
+        CreatedOn = createdOn;
+        ModifyOn = modifiedOn;
+    }
+    
+    public Guid Id { get; set; }
+    public DateTime CreatedOn { get; set; }
+    public DateTime ModifyOn { get; set; }
 
     public void UpdateModificationDate()
     {

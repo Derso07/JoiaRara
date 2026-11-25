@@ -4,12 +4,15 @@ namespace JoiaRara.Domain.Entities;
 
 public class Batch : Entity
 {
-    public Batch(Guid id, DateTime creatOn, DateTime modifyOn, Guid supplierId, User supplier, string batchCode,
+    protected Batch()
+    {
+    }
+    
+    public Batch(Guid id, DateTime creatOn, DateTime modifyOn, Guid supplierId, string batchCode,
         DateTime deliveryDate, DateTime estimatedDeliveryDate, DateTime dueDate, StatusBatch statusBatch) : base(id,
         creatOn, modifyOn)
     {
         SupplierId = supplierId;
-        Supplier = supplier;
         BatchCode = batchCode;
         DeliveryDate = deliveryDate;
         DueDate = dueDate;
@@ -24,6 +27,11 @@ public class Batch : Entity
     public Guid SupplierId { get; private set; }
     public User Supplier { get; private set; }
     
+    public Guid SellerId { get; private set; }
+    public User Seller { get; private set; }
+    
+    public ICollection<Jewel> Jewels { get; private set; }
+        = new List<Jewel>();
     public void MarkAsReceived(StatusBatch received)
     {
         StatusBatch = received;

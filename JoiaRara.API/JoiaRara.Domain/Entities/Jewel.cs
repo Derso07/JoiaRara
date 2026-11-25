@@ -1,40 +1,43 @@
-﻿using JoiaRara.Domain.Enum;
+﻿using JoiaRara.Domain.Entities;
+using JoiaRara.Domain.Enum;
 
-namespace JoiaRara.Domain.Entities;
-
-public class Jewel(
-    Guid id,
-    string description,
-    string name,
-    int code,
-    JewelStatus jewelStatus,
-    decimal price,
-    string photoUrl,
-    string photoId,
-    Guid batchId) : Entity(id, DateTime.UtcNow,DateTime.UtcNow)
+public class Jewel : Entity
 {
-    public int Code { get; private set; } = code;
-    public string Name { get; private set; } = name;
-    public string Description { get; private set; } = description;
-    public JewelStatus JewelStatus { get; private set; } = jewelStatus;
-    public decimal Price { get; private set; } = price;
-    public string PhotoURL { get; private set; } = photoUrl;
-    public string PhotoId { get; private set; } = photoId;
-    
-    //Property Navigation
-    public Guid BatchId { get; set; } = batchId;
-    public Batch Batch { get; set; }
-
-    public void MarkAsActive(JewelStatus jewelActive)
+    protected Jewel()
     {
-        JewelStatus = jewelActive;  
     }
 
-    public void MarkAsInactive(JewelStatus jewelInactive,StatusBatch batchCancelOrReturned)
+    public Jewel(
+        Guid id,
+        string description,
+        string name,
+        int code,
+        decimal price,
+        string photoUrl,
+        string photoId,
+        Guid batchId)
+        : base(id, DateTime.UtcNow, DateTime.UtcNow)
     {
-        if (batchCancelOrReturned is StatusBatch.Returned or StatusBatch.Expired)
-        {
-            JewelStatus = jewelInactive;
-        }
+        Code = code;
+        Name = name;
+        Description = description;
+        Price = price;
+        PhotoURL = photoUrl;
+        PhotoId = photoId;
+
     }
+
+    public int Code { get; private set; }
+
+    public string Name { get; private set; } = string.Empty;
+
+    public string Description { get; private set; } = string.Empty;
+
+    public decimal Price { get; private set; }
+
+    public string PhotoURL { get; private set; } = string.Empty;
+
+    public string PhotoId { get; private set; } = string.Empty;
+
+
 }
