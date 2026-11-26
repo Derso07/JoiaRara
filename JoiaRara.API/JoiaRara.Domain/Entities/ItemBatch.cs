@@ -46,4 +46,6 @@ public class ItemBatch : Entity
     public Guid JewelId { get; private set; }
     
     public Jewel Jewel{ get; private set; }
+    
+    
 }
