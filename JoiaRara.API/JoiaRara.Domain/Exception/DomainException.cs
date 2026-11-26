@@ -1,4 +1,4 @@
-﻿namespace JoiaRara.Domain.Exception;
+﻿namespace JoiaRara.Domain.Exceptions;
 
 public class DomainException : System.Exception
 {

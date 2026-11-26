@@ -1,10 +1,11 @@
 ﻿using JoiaRara.Domain.Enum;
-using JoiaRara.Domain.Exception;
+using JoiaRara.Domain.Exceptions;
 
 namespace JoiaRara.Domain.Entities;
 
 public class Batch : Entity
 {
+    private readonly List<ItemBatch> _itemBatches = new();
     protected Batch()
     {
     }
@@ -32,6 +33,16 @@ public class Batch : Entity
     public User Seller { get; private set; }
 
     public ICollection<ItemBatch> ItemBatches { get; private set; }
+    
+    public void AddItem(int quantity, int quantitySold, int quantityreturned, StatusItemJewel statusItemJewel, Guid batchId, Guid  jewelId)
+    {
+        var item = new ItemBatch(
+            Guid.NewGuid(), DateTime.UtcNow, DateTime.UtcNow,
+            quantity, quantitySold, quantityreturned, statusItemJewel, batchId, jewelId);
+
+        _itemBatches.Add(item);
+    }
+    
     public void MarkAsReceived(StatusBatch received)
     {
         StatusBatch = received;
@@ -48,6 +59,4 @@ public class Batch : Entity
             throw new DomainException("Data de devolução não pode ser maior que o prazo");
         }
     }
-    
-    
 }
