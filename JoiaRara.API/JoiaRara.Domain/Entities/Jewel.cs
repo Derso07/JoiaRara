@@ -14,8 +14,7 @@ public class Jewel : Entity
         int code,
         decimal price,
         string photoUrl,
-        string photoId,
-        Guid batchId)
+        string photoId)
         : base(id, DateTime.UtcNow, DateTime.UtcNow)
     {
         Code = code;

@@ -1,12 +1,13 @@
 ﻿namespace JoiaRara.Domain.Entities;
 
-public class Settlement
+public class Settlement : Entity
 {
     protected Settlement()
     {
         
     }
-    public Settlement(DateTime closingDate, decimal transferAmount)
+    public Settlement(Guid id, DateTime creatOn, DateTime modifyOn,
+        DateTime closingDate, decimal transferAmount) : base(id, creatOn, modifyOn)
     {
         ClosingDate = closingDate;
         TransferAmount = transferAmount;

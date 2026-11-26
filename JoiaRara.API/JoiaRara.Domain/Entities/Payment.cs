@@ -8,21 +8,19 @@ public class Payment : Entity
     }
     
     public Payment(Guid id, DateTime creatOn, DateTime modifyOn, PaymentMethod paymentMethod, 
-        DateTime? paymentDate, DateTime scheduledPaymentDate, Guid saleId)
+        DateTime paymentDate, Guid saleId, decimal amountPaid)
         : base(id, creatOn, modifyOn)
     {
         PaymentMethod = paymentMethod;
         PaymentDate = paymentDate;
-        ScheduledPaymentDate = scheduledPaymentDate;
         SaleId = saleId;
+        AmountPaid = amountPaid > 0 ? amountPaid : 0;
     }
-    
-    
-    public PaymentMethod PaymentMethod { get; private set; }
-    public DateTime? PaymentDate { get; private set; }
-    public DateTime ScheduledPaymentDate { get; private set; }
 
-    public Guid SaleId { get; set; }
-    public Sale Sale { get; set; }
+    public decimal AmountPaid { get; private set; }
+    public PaymentMethod PaymentMethod { get; private set; }
+    public DateTime PaymentDate { get; private set; }
+    public Guid SaleId { get; private set; }
+    public Sale Sale { get; private set; }
     
 }
